@@ -1,0 +1,323 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Campaigns\",\"Months\",\"Channels\",\"Outcomes\",\"ContactBands\",\"DataFolder\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"C:/path/to/marketing-campaign-performance/data/processed\" meta [IsParameterQuery=true,Type=\"Text\",IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "1859468d-1dc1-4070-a2a0-bcc135b0731c"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "Campaigns_Months",
+        "fromColumn": "Month",
+        "fromTable": "Campaigns",
+        "toColumn": "Month",
+        "toTable": "Months"
+      },
+      {
+        "name": "Campaigns_Channels",
+        "fromColumn": "Channel",
+        "fromTable": "Campaigns",
+        "toColumn": "Channel",
+        "toTable": "Channels"
+      },
+      {
+        "name": "Campaigns_Outcomes",
+        "fromColumn": "Previous Outcome",
+        "fromTable": "Campaigns",
+        "toColumn": "Previous Outcome",
+        "toTable": "Outcomes"
+      },
+      {
+        "name": "Campaigns_ContactBands",
+        "fromColumn": "Contact Band",
+        "fromTable": "Campaigns",
+        "toColumn": "Contact Band",
+        "toTable": "ContactBands"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Campaigns",
+        "columns": [
+          {
+            "name": "Source Row",
+            "dataType": "int64",
+            "lineageTag": "64059b28-cdbd-4788-81bc-e7798fd5dabe",
+            "sourceColumn": "Source Row",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "lineageTag": "ee4d0998-9482-4650-a03f-dfaf70181f86",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month Order",
+            "dataType": "int64",
+            "lineageTag": "c8a22f68-ed40-4281-bef8-1559a818adf3",
+            "sourceColumn": "Month Order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Channel",
+            "dataType": "string",
+            "lineageTag": "a40613d9-0bed-46e0-90b8-641596c21b3b",
+            "sourceColumn": "Channel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Previous Outcome",
+            "dataType": "string",
+            "lineageTag": "6560833b-f70d-47ef-b865-0352e1c42115",
+            "sourceColumn": "Previous Outcome",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Contacts",
+            "dataType": "int64",
+            "lineageTag": "f795b1be-17ab-4323-9e0c-bfa30bc3b371",
+            "sourceColumn": "Contacts",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Contact Band",
+            "dataType": "string",
+            "lineageTag": "78685b05-f3dc-412e-9029-ac16a70f821d",
+            "sourceColumn": "Contact Band",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subscribed",
+            "dataType": "int64",
+            "lineageTag": "eb60b351-09bb-4378-a46a-2442a9e4ef5f",
+            "sourceColumn": "Subscribed",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fb8ce34e-7eab-4f65-ba24-0be56d9ea574",
+        "measures": [
+          {
+            "name": "Records",
+            "expression": "COUNTROWS('Campaigns')",
+            "formatString": "#,0",
+            "lineageTag": "10a8bda9-f739-476f-bbef-edddcf7398f1"
+          },
+          {
+            "name": "Subscriptions",
+            "expression": "SUM('Campaigns'[Subscribed])",
+            "formatString": "#,0",
+            "lineageTag": "1d57ca58-3646-4d9b-bcab-92be1a171a62"
+          },
+          {
+            "name": "Subscription Rate",
+            "expression": "DIVIDE([Subscriptions],[Records])",
+            "formatString": "0.0%",
+            "lineageTag": "bb1730ba-f306-4c31-bc5f-b9f670361851"
+          },
+          {
+            "name": "Recorded Contacts",
+            "expression": "SUM('Campaigns'[Contacts])",
+            "formatString": "#,0",
+            "lineageTag": "f4be3da1-024b-4fd5-84f9-5733552acda6"
+          },
+          {
+            "name": "Contacts per Record",
+            "expression": "DIVIDE([Recorded Contacts],[Records])",
+            "formatString": "0.00",
+            "lineageTag": "e93c6da7-1ac8-4e3c-884d-c7665bf9f5c2"
+          },
+          {
+            "name": "Subscriptions per 100 Contacts",
+            "expression": "100 * DIVIDE([Subscriptions],[Recorded Contacts])",
+            "formatString": "0.00",
+            "lineageTag": "1d9810e9-6b74-4b63-b264-31deb2af94e6"
+          },
+          {
+            "name": "Group Size",
+            "expression": "IF([Records] < 100, \"Small sample: N < 100\", \"N >= 100; descriptive comparison\")",
+            "lineageTag": "8d0fcde2-ded8-45a7-b46b-4976f0c37890"
+          },
+          {
+            "name": "Selection Finding",
+            "expression": "VAR N=[Records] RETURN IF(ISBLANK(N), \"No records match this selection.\", FORMAT(N,\"#,0\") & \" records; \" & FORMAT([Subscriptions],\"#,0\") & \" subscriptions (\" & FORMAT([Subscription Rate],\"0.0%\") & \"). Recorded contacts: \" & FORMAT([Recorded Contacts],\"#,0\") & \". Compare like months and channels before choosing a trial.\")",
+            "lineageTag": "32194a57-1fa5-49cc-bb95-42ca76c880ae"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Campaigns",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                " Source = Csv.Document(File.Contents(DataFolder & \"/Campaigns.csv\"),[Delimiter=\",\",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),",
+                " Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),",
+                " Typed = Table.TransformColumnTypes(Headers, {{\"Source Row\", Int64.Type}, {\"Month\", type text}, {\"Month Order\", Int64.Type}, {\"Channel\", type text}, {\"Previous Outcome\", type text}, {\"Contacts\", Int64.Type}, {\"Contact Band\", type text}, {\"Subscribed\", Int64.Type}}, \"en-US\")",
+                "in",
+                " Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Months",
+        "columns": [
+          {
+            "name": "Month",
+            "dataType": "string",
+            "lineageTag": "6e82987b-5750-4709-bbe8-0d86b485a440",
+            "sortByColumn": "Month Order",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month Order",
+            "dataType": "int64",
+            "lineageTag": "1b8bd705-2ef5-42ed-bfe0-3992b30ed7d2",
+            "sourceColumn": "Month Order",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "e2c21448-9d5d-4c15-849d-ab5344657d62",
+        "partitions": [
+          {
+            "name": "Months",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                " Source = Csv.Document(File.Contents(DataFolder & \"/Months.csv\"),[Delimiter=\",\",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),",
+                " Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),",
+                " Typed = Table.TransformColumnTypes(Headers, {{\"Month\", type text}, {\"Month Order\", Int64.Type}}, \"en-US\")",
+                "in",
+                " Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Channels",
+        "columns": [
+          {
+            "name": "Channel",
+            "dataType": "string",
+            "lineageTag": "098370da-1407-41da-9537-cd224517e344",
+            "sourceColumn": "Channel",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "c71f1761-4991-45bd-8703-21202d38668c",
+        "partitions": [
+          {
+            "name": "Channels",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                " Source = Csv.Document(File.Contents(DataFolder & \"/Channels.csv\"),[Delimiter=\",\",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),",
+                " Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),",
+                " Typed = Table.TransformColumnTypes(Headers, {{\"Channel\", type text}}, \"en-US\")",
+                "in",
+                " Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Outcomes",
+        "columns": [
+          {
+            "name": "Previous Outcome",
+            "dataType": "string",
+            "lineageTag": "532709f1-6fb3-4ea6-86d4-b67f438df635",
+            "sourceColumn": "Previous Outcome",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "e3b4cf33-c152-478d-a3f3-8fd65710ccd2",
+        "partitions": [
+          {
+            "name": "Outcomes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                " Source = Csv.Document(File.Contents(DataFolder & \"/Outcomes.csv\"),[Delimiter=\",\",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),",
+                " Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),",
+                " Typed = Table.TransformColumnTypes(Headers, {{\"Previous Outcome\", type text}}, \"en-US\")",
+                "in",
+                " Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ContactBands",
+        "columns": [
+          {
+            "name": "Contact Band",
+            "dataType": "string",
+            "lineageTag": "882cd852-c6ec-4902-9372-da3e8eb1217b",
+            "sourceColumn": "Contact Band",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3f3bfc52-bb52-40fc-90e1-f791105b5a08",
+        "partitions": [
+          {
+            "name": "ContactBands",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                " Source = Csv.Document(File.Contents(DataFolder & \"/ContactBands.csv\"),[Delimiter=\",\",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),",
+                " Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),",
+                " Typed = Table.TransformColumnTypes(Headers, {{\"Contact Band\", type text}}, \"en-US\")",
+                "in",
+                " Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
