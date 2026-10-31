@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CampaignReview"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "012ae050-fa5d-4aec-80f9-7208fdf93c05"
+  }
+}

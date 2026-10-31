@@ -1,0 +1,41 @@
+{
+  "all": {
+    "records": 41188,
+    "subscriptions": 4640,
+    "conversion": 0.11265417111780131,
+    "recorded_contacts": 105754,
+    "subscriptions_per_100_contacts": 4.38754089679823
+  },
+  "cellular": {
+    "records": 26144,
+    "subscriptions": 3853,
+    "conversion": 0.14737607099143207,
+    "recorded_contacts": 62877,
+    "subscriptions_per_100_contacts": 6.127836887892234
+  },
+  "may": {
+    "records": 13769,
+    "subscriptions": 886,
+    "conversion": 0.06434744716391895,
+    "recorded_contacts": 33593,
+    "subscriptions_per_100_contacts": 2.637454231536332
+  },
+  "success": {
+    "records": 1373,
+    "subscriptions": 894,
+    "conversion": 0.651128914785142,
+    "recorded_contacts": 2483,
+    "subscriptions_per_100_contacts": 36.004832863471606
+  },
+  "cellular_may": {
+    "records": 5518,
+    "subscriptions": 614,
+    "conversion": 0.11127220007249003,
+    "recorded_contacts": 12488,
+    "subscriptions_per_100_contacts": 4.916720051249199
+  },
+  "source_rows": 41188,
+  "exact_repeats_retained": 12,
+  "source_sha256": "74adfc578bf77a7ff4bb1ba4a9f8709d9e3c6907342959c2c8416847e0afb4d8",
+  "reporting_sha256": "bee06e480d9284d8f0de41bb8e64ad94787feabdb2ed40bb1f41a953dc11042c"
+}
