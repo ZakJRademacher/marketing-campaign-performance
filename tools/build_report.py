@@ -41,10 +41,13 @@ def build():
     r.text('investigation','title','Does the pattern hold within the same channel and month?',(24,28,1392,65),25,INK)
     r.text('investigation','sub','Filters on this page are independent. Use the same selections to compare pages. Months pool observations across source years.',(24,104,1392,38),12)
     filters('investigation')
-    chart('investigation','bands','ContactBands','Contact Band','Subscription Rate','Subscription rate by final contact-count band',(24,246,680,330),True)
-    r.table('investigation','evidence',[('Outcomes','Previous Outcome'),('Campaigns','Records',True),('Campaigns','Subscriptions',True),('Campaigns','Subscription Rate',True),('Campaigns','Contacts per Record',True),('Campaigns','Group Size',True)],'Previous-outcome evidence in this selection',(728,246,688,330))
-    r.text('investigation','definitions','READ THE MEASURES\nOne record is one source client-campaign observation, not a phone-call event. Recorded contacts sum campaign contact counts, including the last contact. Rates divide observed subscriptions by records in the same selection. Source row numbers provide lineage, not reusable customer identities.\n\nWHY THIS IS NOT A STOPPING RULE\nNonresponders may receive more attempts; final contact count is partly a result of the process. Call duration is post-contact and excluded. The source lacks costs and a randomized untreated group. Do not infer ROI, incremental lift or a causal effect of contact frequency.',(24,604,1392,240),14,INK)
+    chart('investigation','bands','ContactBands','Contact Band','Subscription Rate','Subscription rate by final contact-count band',(24,490,680,340),True)
+    r.table('investigation','evidence',[('Outcomes','Previous Outcome'),('Campaigns','Records',True),('Campaigns','Subscriptions',True),('Campaigns','Subscription Rate',True),('Campaigns','Contacts per Record',True),('Campaigns','Group Size',True)],'Previous-outcome evidence in this selection',(24,246,1392,220))
+    r.text('investigation','definitions','READ THE MEASURES\nOne record is one source client-campaign observation, not a phone-call event. Recorded contacts sum campaign contact counts, including the last contact. Rates divide observed subscriptions by records in the same selection. Source row numbers provide lineage, not reusable customer identities.\n\nWHY THIS IS NOT A STOPPING RULE\nNonresponders may receive more attempts; final contact count is partly a result of the process. Call duration is post-contact and excluded. The source lacks costs and a randomized untreated group. Do not infer ROI, incremental lift or a causal effect of contact frequency.',(728,490,688,340),14,INK)
     r.text('investigation','small','SMALL GROUPS / Counts below 100 are flagged in tooltips and the table. This display convention is not a statistical significance test. Unknown and nonexistent prior outcomes remain separate observed categories.',(24,860,1392,90),12)
+    # Reapply the source-controlled presentation after generation.
+    import subprocess,sys
+    subprocess.run([sys.executable,str(Path(__file__).resolve().parents[1]/"tools"/"apply_visual_theme.py")],check=True)
     print(P/'powerbi/CampaignReview.pbip')
 
 if __name__=='__main__':build()

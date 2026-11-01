@@ -3,9 +3,9 @@
   "name": "bands",
   "position": {
     "x": 24,
-    "y": 246,
+    "y": 490,
     "z": 0,
-    "height": 330,
+    "height": 340,
     "width": 680,
     "tabOrder": 2484
   },
@@ -138,7 +138,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#61777D'"
+                      "Value": "'#646781'"
                     }
                   }
                 }
@@ -169,7 +169,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#61777D'"
+                      "Value": "'#646781'"
                     }
                   }
                 }
@@ -194,7 +194,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E3E8E5'"
+                      "Value": "'#E5E3F1'"
                     }
                   }
                 }
@@ -238,7 +238,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#203B43'"
+                      "Value": "'#202143'"
                     }
                   }
                 }
@@ -276,7 +276,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#BE5D50'"
+                      "Value": "'#B32787'"
                     }
                   }
                 }
@@ -353,7 +353,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#203B43'"
+                      "Value": "'#202143'"
                     }
                   }
                 }
