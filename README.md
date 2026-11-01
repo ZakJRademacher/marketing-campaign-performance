@@ -1,26 +1,32 @@
 # Marketing Campaign Performance
 
-**Where should a prospective follow-up experiment focus, given observed subscriptions and contact workload?**
+Higher subscription rates can make a campaign segment look promising, but they don't tell us what another contact would achieve. I used this project to compare outcomes with the workload behind them and outline what a useful follow-up test would need.
 
-The historical source has **41,188 campaign observations, 4,640 subscriptions (11.3%) and 105,754 recorded contacts**. Previous-success observations have a 65.1% subscription rate, but they are a selected population, not evidence of campaign lift.
+The **Power BI report** covers **41,188 campaign observations, 4,640 subscriptions (11.3%), and 105,754 recorded contacts**. Python and SQLite prepare the data and support a closer comparison of prior outcomes within the same month and channel.
 
-The new Python/SQLite companion compares success/failure history within the same observed month and channel. In **May / cellular**, rates are **103/214 (48.1%) versus 130/1,661 (7.8%)**. The difference remains descriptive; month names pool years and final contact counts are not randomized treatments.
+[View the report](deliverables/dashboard-preview.png) · [Download the PBIX](deliverables/Marketing%20Campaign%20Review.pbix) · [Read the comparison](docs/OUTCOME_COMPARISON.md)
 
-[View current preview](deliverables/dashboard-preview.png) · [Download current PBIX](deliverables/Marketing%20Campaign%20Review.pbix) · [Comparison and memo](docs/OUTCOME_COMPARISON.md) · [SQL](sql/matched_outcomes.sql) · [Reproduce](#reproduce)
+![Power BI campaign review showing subscriptions and contact workload](deliverables/dashboard-preview.png)
 
-![Current Power BI campaign review, all observed records](deliverables/dashboard-preview.png)
+## What I found
 
-Power BI retains its current star model and calculations. Its first-page finding responds to that page's slicers; pages have independent selections. [Existing decision memo](docs/DECISION_MEMO.md) · [Worked prospective experiment proposal](docs/EXPERIMENT_PROPOSAL.md) · [All 20 comparison cells and controls](deliverables/outcome-comparison).
+Records with a previous successful outcome have a **65.1% subscription rate** overall. That's a selected group of observations, so its rate isn't an estimate of campaign lift.
 
-## Open the report
+The difference remains when comparing prior-success and prior-failure groups within each observed month/channel combination. For **cellular contacts in May**, those rates are **103/214 (48.1%)** and **130/1,661 (7.8%)**. The remaining observations in that cell have other prior outcomes and stay in the overall totals.
 
-[Imported-data Power BI workbook](deliverables/Marketing%20Campaign%20Review.pbix). Open in Power BI Desktop. Editable source: [CampaignReview.pbip](powerbi/CampaignReview.pbip).
+This is a reason to investigate, rather than a reason to promise better conversion. Month names pool years, and the source has no durable client ID or contact-by-contact history. Final contact count may also reflect earlier unsuccessful attempts. A prospective experiment would be needed to test the effect of an additional follow-up.
 
-For refresh on a new machine, open the PBIP, set the DataFolder Power Query parameter to this project's absolute `data/processed` folder, then Home > Refresh. The five related CSV tables must stay together. Each page has independent slicers; the live selection finding on page one responds to its slicers. Run `python tools/build_report.py` only when intentionally regenerating the editable report layout.
+[All 20 comparison cells](deliverables/outcome-comparison) · [SQL](sql/matched_outcomes.sql) · [Decision memo](docs/DECISION_MEMO.md) · [Proposed experiment](docs/EXPERIMENT_PROPOSAL.md)
+
+## Open and refresh
+
+Open the PBIX in Power BI Desktop; its sample data is already imported. Each page has its own filters. The first page's written selection finding updates with its slicers.
+
+For a local refresh, open [CampaignReview.pbip](powerbi/CampaignReview.pbip), set the **DataFolder** Power Query parameter to your absolute `data/processed` folder, then select **Home > Refresh**. Keep all five related CSV tables together. Run `python tools/build_report.py` only when rebuilding the editable report layout.
 
 ## Reproduce
 
-Python 3.10+, standard library only:
+From the repository root, using Python 3.10+ and the standard library:
 
 ```sh
 python tools/download_data.py
@@ -29,19 +35,12 @@ python tools/compare_outcomes.py
 python -m unittest discover -s tests -v
 ```
 
-The preparation writes source-row lineage, a SQLite database, reporting CSVs, comparison cells and [control totals](data/processed/controls.json). [SQL investigation](sql) shows counts and denominators explicitly. Source records are retained; repeated-looking rows without durable IDs are not automatically removed.
+Preparation writes a SQLite database, reporting CSVs, source references, and [control totals](data/processed/controls.json). The comparison reads that database without modifying it and writes its own results. Counts, subscriptions, and contacts reconcile to the source; rates use each group's denominator. Similar-looking records are retained because their identity is uncertain.
 
-The new comparison reads the prepared SQLite database without modifying it and writes reproducible CSV/control files. Missing-group rates and gaps remain blank; other-outcome records remain in all-record controls. [Walkthrough, source reconciliation and practice](docs/OUTCOME_COMPARISON.md).
+## Documentation
 
-## Read the analysis
+- [Source and licensing](docs/SOURCES.md) · [Measures and refresh](docs/METHOD.md) · [Verification](docs/QA.md)
+- [Comparison walkthrough](docs/OUTCOME_COMPARISON.md) · [Practice](docs/LEARNING.md)
+- [Cover](deliverables/portfolio-cover-wide.png) · [Motion preview](deliverables/portfolio-motion.webm) · [Visual maintenance](docs/VISUAL_DESIGN.md) · [Presentation history](docs/DASHBOARD_RELEASE.md)
 
-- [Source, version and licensing](docs/SOURCES.md)
-- [Measure definitions and refresh boundaries](docs/METHOD.md)
-- [Beginner walkthrough and practice](docs/LEARNING.md)
-- [Verification](docs/QA.md)
-
-Independent portfolio demonstration. Historical associations motivate a controlled follow-up experiment; they do not establish causal lift, profit or realized client outcomes. The previous Retail and Complaint projects remain available as separate supporting work.
-
-## Presentation history
-
-[Cover preview](deliverables/portfolio-cover-wide.png) · [Motion cover](deliverables/portfolio-motion.webm) · [Design maintenance](docs/VISUAL_DESIGN.md) · [November 1 release record](docs/DASHBOARD_RELEASE.md). Covers are presentation assets; native report behavior is documented separately.
+This independent project uses historical UCI Bank Marketing data. It measures observed outcomes and workload, not profit, ROI, or an executed intervention. Refresh runs locally on demand.

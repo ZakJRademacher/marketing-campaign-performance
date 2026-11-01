@@ -1,6 +1,6 @@
 # Beginner walkthrough
 
-Start with the question, then the population, count, rate and proposed action. A rate compares a numerator with its eligible denominator; changing the filter changes both. A dashboard is useful only when you can trace its headline numbers back to records.
+Use these exercises to trace subscriptions and contact workload from the report back to source records. For each selection, check both the count and the denominator before interpreting the rate. Work in a copy so you can restore the published defaults.
 
 1. Explain the difference between one observation and one phone call. Why is COUNTROWS not a contact count?
 2. Select cellular on page one. Expected: 26,144 records, 3,853 subscriptions, 62,877 contacts and 14.7% observed conversion.

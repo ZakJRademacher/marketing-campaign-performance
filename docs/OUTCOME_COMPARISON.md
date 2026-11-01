@@ -1,6 +1,6 @@
 # Prior outcomes within the same month and channel
 
-**For:** marketing operations manager. **Question:** does the selected prior-success population still differ from prior-failure records within the same observed month label and contact channel?
+The overall prior-success group has a higher subscription rate. I checked whether that difference also appears when success and failure records share the same observed month label and contact channel.
 
 ## Findings
 
@@ -36,6 +36,6 @@ All-cell totals reconcile to 41,188 records, 4,640 subscriptions and 105,754 con
 
 ## Interpretation and practice
 
-Same month/channel comparisons reduce two visible sources of mixing; they do not remove differences in customer history, economic conditions, eligibility, repeated clients or contact selection. The source lacks durable client IDs and explicit years. Final contact count may be a consequence of unsuccessful attempts. No costs, ROI, propensity targeting policy or incremental lift is inferred.
+Comparing within a month and channel removes two obvious differences between groups. Customer history, economic conditions, eligibility, repeated clients, and contact selection can still differ. The source lacks durable client IDs and explicit years. Final contact count may be a consequence of unsuccessful attempts. No costs, ROI, propensity targeting policy or incremental lift is inferred.
 
 For practice, explain why the pooled 65.1% prior-success rate and the May-cellular 48.1% rate can both be correct. Choose another observed cell, recompute its rates from source rows and identify an alternative explanation for the difference. Keep that attempt separate from this worked example. The historical source retains [its attribution and terms](SOURCES.md).
