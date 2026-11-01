@@ -1,6 +1,6 @@
 # Worked proposal: a prospective follow-up experiment
 
-**Status:** an illustrative design exercise, not an executed campaign, realized lift estimate or instruction to contact actual people. Historical group differences supply a question; they do not supply a treatment effect.
+This is a proposed experiment, rather than a campaign that ran. It sets out how a future owner could test a follow-up protocol. The historical comparison helps form the question, but cannot supply the treatment effect.
 
 ## Decision and population
 
@@ -36,4 +36,4 @@ Missing outcome data are not silently recorded as no subscription. Reconcile cap
 
 ## Explain it independently
 
-Without this guide open, explain why prior campaign outcome cannot be randomized retrospectively, why final contact count is not a treatment assignment, and why removing nonresponders changes the estimand. Modify the proposed contact timing or guardrail, identify the records needed to evaluate it, and describe what you would report if the interval includes both harm and a useful improvement. Completion of this written exercise does not establish that a real experiment ran or that independent proficiency has been assessed.
+Without this guide open, explain why prior campaign outcome cannot be randomized retrospectively, why final contact count is not a treatment assignment, and why removing nonresponders changes the question the estimate answers. Modify the proposed contact timing or guardrail, identify the records needed to evaluate it, and describe what you would report if the interval includes both harm and a useful improvement. Keep your explanation separate from the worked proposal so you can revisit the reasoning later.
