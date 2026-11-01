@@ -4,7 +4,7 @@
   "displayName": "02  Compare like groups",
   "displayOption": "FitToPage",
   "height": 1000,
-  "width": 1440,
+  "width": 1600,
   "objects": {
     "background": [
       {
@@ -14,7 +14,7 @@
               "color": {
                 "expr": {
                   "Literal": {
-                    "Value": "'#F7F6FC'"
+                    "Value": "'#0B1423'"
                   }
                 }
               }

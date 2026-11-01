@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "definitions",
   "position": {
-    "x": 728,
-    "y": 490,
-    "width": 688,
-    "height": 340,
-    "z": 0,
+    "x": 916,
+    "y": 482,
+    "width": 652,
+    "height": 330,
+    "z": 10,
     "tabOrder": 6064
   },
   "visual": {
@@ -28,7 +28,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F7F6FC'"
+                      "Value": "'#142339'"
                     }
                   }
                 }
@@ -51,6 +51,31 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#263B57'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -79,7 +104,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#202143'"
+                      "Value": "'#EAF0FC'"
                     }
                   }
                 }
@@ -88,7 +113,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "12D"
                 }
               }
             },
@@ -96,6 +121,47 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -114,8 +180,8 @@
                     "value": "READ THE MEASURES",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "14pt",
-                      "color": "#202143"
+                      "fontSize": "13pt",
+                      "color": "#EAF0FC"
                     }
                   }
                 ]
@@ -126,8 +192,8 @@
                     "value": "One record is one source client-campaign observation, not a phone-call event. Recorded contacts sum campaign contact counts, including the last contact. Rates divide observed subscriptions by records in the same selection. Source row numbers provide lineage, not reusable customer identities.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "14pt",
-                      "color": "#202143"
+                      "fontSize": "13pt",
+                      "color": "#EAF0FC"
                     }
                   }
                 ]
@@ -138,8 +204,8 @@
                     "value": "",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "14pt",
-                      "color": "#202143"
+                      "fontSize": "13pt",
+                      "color": "#EAF0FC"
                     }
                   }
                 ]
@@ -150,8 +216,8 @@
                     "value": "WHY THIS IS NOT A STOPPING RULE",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "14pt",
-                      "color": "#202143"
+                      "fontSize": "13pt",
+                      "color": "#EAF0FC"
                     }
                   }
                 ]
@@ -162,8 +228,8 @@
                     "value": "Nonresponders may receive more attempts; final contact count is partly a result of the process. Call duration is post-contact and excluded. The source lacks costs and a randomized untreated group. Do not infer ROI, incremental lift or a causal effect of contact frequency.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "14pt",
-                      "color": "#202143"
+                      "fontSize": "13pt",
+                      "color": "#EAF0FC"
                     }
                   }
                 ]
