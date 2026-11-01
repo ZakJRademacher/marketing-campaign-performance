@@ -9,3 +9,7 @@ Records ending with six or more contacts account for 32,350 recorded contacts an
 **Proposed next step:** compare previous outcomes within the same channel and observed month, flag small cells, then scope a randomized follow-up-protocol trial in an adequately sized population. Evaluate subscription rate and contacts per observation together. Record staff time and campaign costs prospectively if an economic evaluation is needed.
 
 **Limits:** month labels pool years; no fabricated monthly chronology. The full source is documented as May 2008-November 2010, but this CSV has no explicit year column. Call duration is excluded from actionable pre-contact analysis. No customer identities, individual targeting rules, costs, ROI or causal contact-frequency effects are inferred.
+
+## Follow-up analysis — November 1, 2026
+
+The [within-month/channel comparison](OUTCOME_COMPARISON.md) now checks observed prior-success versus prior-failure groups without claiming causal lift. The [worked prospective experiment proposal](EXPERIMENT_PROPOSAL.md) specifies a hypothetical protocol and the future operational data/decisions needed before any trial. Neither is an executed intervention.

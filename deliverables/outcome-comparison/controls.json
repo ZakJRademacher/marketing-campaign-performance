@@ -1,0 +1,40 @@
+{
+  "input_database_sha256": "d28141665a9e9d9fb43553b05e18e06d587f8b85575a27a130dc3f538d797c19",
+  "sql_sha256": "1cad1c084b3353af363223a7b543e0c00286dff440085a5aec60dd16fb22ce3f",
+  "csv_sha256": "c1865c8db067d49382b6b56c268f019874455d824f81f636db4eb716b796a5c9",
+  "source_totals": {
+    "records": 41188,
+    "subscriptions": 4640,
+    "contacts": 105754
+  },
+  "result_totals": {
+    "records": 41188,
+    "subscriptions": 4640,
+    "contacts": 105754
+  },
+  "source_outcomes": [
+    {
+      "previous_outcome": "failure",
+      "records": 4252,
+      "subscriptions": 605,
+      "contacts": 8526
+    },
+    {
+      "previous_outcome": "nonexistent",
+      "records": 35563,
+      "subscriptions": 3141,
+      "contacts": 94745
+    },
+    {
+      "previous_outcome": "success",
+      "records": 1373,
+      "subscriptions": 894,
+      "contacts": 2483
+    }
+  ],
+  "observed_month_channel_cells": 20,
+  "cells_with_both_groups": 20,
+  "cells_without_both_groups": 0,
+  "interpretation": "Same observed month and channel only; years are pooled. No client ID, randomized intervention, matched-person effect or causal lift is inferred.",
+  "absence": "Zero records means an observed group is absent in this source cell. Its rate and the two-group gap are blank, never filled with zero."
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-01",
+  "method": "Independent CSV/datetime/Decimal/dictionary/Fraction calculations from original source files; project query/transform functions not imported.",
+  "results": {
+    "source_records": 41188,
+    "cells": 20,
+    "all_counts_contacts_and_rates_match": true,
+    "both_groups_cells": 20,
+    "small_group_cells": 13,
+    "cellular_may": {
+      "month": "may",
+      "month_order": "5",
+      "channel": "cellular",
+      "all_records": "5518",
+      "all_subscriptions": "614",
+      "all_contacts": "12488",
+      "success_records": "214",
+      "success_subscriptions": "103",
+      "success_contacts": "416",
+      "failure_records": "1661",
+      "failure_subscriptions": "130",
+      "failure_contacts": "3565",
+      "success_rate": "0.48130841121495327",
+      "failure_rate": "0.07826610475617098",
+      "success_contacts_per_record": "1.9439252336448598",
+      "failure_contacts_per_record": "2.1462974111980735",
+      "other_outcome_records": "3643",
+      "observed_rate_gap": "0.4030423064587823",
+      "comparison_status": "Both groups observed",
+      "population_note": "Both groups at least 100; no causal or significance claim"
+    },
+    "positive_rate_gaps": 20,
+    "input_sha256": "74adfc578bf77a7ff4bb1ba4a9f8709d9e3c6907342959c2c8416847e0afb4d8"
+  },
+  "native_verification": "Existing native reports unchanged. New source/SQL checks do not establish native rendering or refresh; see the separate release note."
+}
