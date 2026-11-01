@@ -1,8 +1,8 @@
 {
-  "title": "Marketing Campaigns",
+  "title": "Marketing Campaign Review",
   "eyebrow": "CAMPAIGN ANALYSIS",
   "description": "Balance response patterns with contact workload.",
-  "format": "Native Power BI report",
+  "format": "Power BI · Python · SQL",
   "image": "deliverables/dashboard-preview.png",
   "tokens": "design-tokens.json",
   "color_roles": {
@@ -14,6 +14,7 @@
     "accent": "accent"
   },
   "frame_label": "Campaign review",
-  "preview_note": "Historical records; descriptive analysis",
-  "footer": "PYTHON / SQL / POWER BI"
+  "preview_note": "Historical campaign data · observed outcomes",
+  "footer": "PYTHON / SQL / POWER BI",
+  "preview_mode": "contain"
 }
