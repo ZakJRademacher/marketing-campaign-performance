@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "definitions",
   "position": {
-    "x": 24,
-    "y": 604,
-    "width": 1392,
-    "height": 240,
+    "x": 728,
+    "y": 490,
+    "width": 688,
+    "height": 340,
     "z": 0,
     "tabOrder": 6064
   },
@@ -28,7 +28,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F6F5F0'"
+                      "Value": "'#F7F6FC'"
                     }
                   }
                 }
@@ -79,7 +79,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#203B43'"
+                      "Value": "'#202143'"
                     }
                   }
                 }
@@ -115,7 +115,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#202143"
                     }
                   }
                 ]
@@ -127,7 +127,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#202143"
                     }
                   }
                 ]
@@ -139,7 +139,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#202143"
                     }
                   }
                 ]
@@ -151,7 +151,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#202143"
                     }
                   }
                 ]
@@ -163,7 +163,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#202143"
                     }
                   }
                 ]

@@ -1,5 +1,12 @@
 # Marketing Campaign Performance
 
+![Current project presentation](deliverables/portfolio-cover-wide.png)
+
+[Motion cover preview](deliverables/portfolio-motion.webm) · [Presentation maintenance guide](docs/VISUAL_DESIGN.md)
+
+The October 2026 presentation refresh retains the existing calculations, source policies and report contracts. Cover animation is separate from native desktop report behavior.
+
+
 **Which contact-history segments warrant a follow-up experiment, based on observed subscriptions and contact workload?**
 
 A historical business investigation using Python, SQLite and Power BI. [Decision memo](docs/DECISION_MEMO.md) explains the evidence, next action and limitations.
