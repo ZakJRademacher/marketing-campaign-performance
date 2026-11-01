@@ -1,29 +1,29 @@
 {
-  "name": "Fieldnotes / Decision reports",
+  "name": "Response",
   "dataColors": [
-    "#147D80",
-    "#BE5D50",
-    "#BA852D",
-    "#667C91",
-    "#9BAEAA"
+    "#3B4ED4",
+    "#B32787",
+    "#9D9CC0"
   ],
-  "background": "#FFFFFF",
-  "foreground": "#203B43",
-  "tableAccent": "#147D80",
+  "background": "#F7F6FC",
+  "foreground": "#202143",
+  "tableAccent": "#3B4ED4",
   "textClasses": {
     "title": {
-      "fontFace": "Segoe UI Semibold",
-      "fontSize": 13,
-      "color": "#203B43"
+      "fontFace": "Segoe UI",
+      "color": "#202143"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "color": "#202143"
     },
     "label": {
       "fontFace": "Segoe UI",
-      "fontSize": 11,
-      "color": "#61777D"
+      "color": "#646781"
     },
     "callout": {
       "fontFace": "Segoe UI",
-      "color": "#203B43"
+      "color": "#202143"
     }
   }
 }
