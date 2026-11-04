@@ -37,10 +37,9 @@ python -m unittest discover -s tests -v
 
 Preparation writes a SQLite database, reporting CSVs, source references, and [control totals](data/processed/controls.json). The comparison reads that database without modifying it and writes its own results. Counts, subscriptions, and contacts reconcile to the source; rates use each group's denominator. Similar-looking records are retained because their identity is uncertain.
 
-## Documentation
+## Methods and verification
 
 - [Source and licensing](docs/SOURCES.md) · [Measures and refresh](docs/METHOD.md) · [Verification](docs/QA.md)
-- [Comparison walkthrough](docs/OUTCOME_COMPARISON.md) · [Practice](docs/LEARNING.md)
-- [Cover](deliverables/portfolio-cover-wide.png) · [Motion preview](deliverables/portfolio-motion.webm) · [Visual maintenance](docs/VISUAL_DESIGN.md) · [Presentation history](docs/DASHBOARD_RELEASE.md)
+- [Comparison method](docs/OUTCOME_COMPARISON.md) · [Visual maintenance](docs/VISUAL_DESIGN.md)
 
 This independent project uses historical UCI Bank Marketing data. It measures observed outcomes and workload, not profit, ROI, or an executed intervention. Refresh runs locally on demand.

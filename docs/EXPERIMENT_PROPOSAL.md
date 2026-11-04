@@ -16,7 +16,7 @@ For this worked scenario, a future campaign owner defines an eligible population
 - **Treatment:** offer one standardized additional follow-up, using the same approved message and channel, three business days after assignment. No extra retry if it cannot be completed. Cancel it if the client has subscribed, withdrawn permission or become ineligible; keep the client in the assigned-arm analysis.
 - **Window:** count outcomes through 30 calendar days after each assignment. Close enrollment before analysis and wait until the final participant has the full window. No historical month label is converted into a trial date.
 
-These are explicit assumptions for the exercise. They are not claims about the bank's actual historical practice. The proposed contrast tests a follow-up protocol, not whether previously successful customers are intrinsically better prospects.
+These are explicit assumptions for the proposed trial, not claims about the bank's actual historical practice. The contrast would test a follow-up protocol, not whether previously successful customers are intrinsically better prospects.
 
 ## Measures and decision criteria
 

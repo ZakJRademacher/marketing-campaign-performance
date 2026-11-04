@@ -34,8 +34,8 @@ The command opens the prepared SQLite database read-only. Use `--database /path/
 
 All-cell totals reconcile to 41,188 records, 4,640 subscriptions and 105,754 contacts. Outcome totals also reconcile separately: 1,373 prior-success, 4,252 prior-failure and 35,563 nonexistent-prior-outcome records. A separate raw-CSV dictionary calculation checked every count, contact sum, rate and gap. Existing headline definitions and the Power BI report are unchanged.
 
-## Interpretation and practice
+## Interpretation
 
 Comparing within a month and channel removes two obvious differences between groups. Customer history, economic conditions, eligibility, repeated clients, and contact selection can still differ. The source lacks durable client IDs and explicit years. Final contact count may be a consequence of unsuccessful attempts. No costs, ROI, propensity targeting policy or incremental lift is inferred.
 
-For practice, explain why the pooled 65.1% prior-success rate and the May-cellular 48.1% rate can both be correct. Choose another observed cell, recompute its rates from source rows and identify an alternative explanation for the difference. Keep that attempt separate from this worked example. The historical source retains [its attribution and terms](SOURCES.md).
+The pooled 65.1% prior-success rate and the May-cellular 48.1% rate use different populations and can both be correct. The historical source retains [its attribution and terms](SOURCES.md).
