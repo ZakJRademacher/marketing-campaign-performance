@@ -24,7 +24,7 @@ These are explicit assumptions for the proposed trial, not claims about the bank
 
 **Workload guardrail:** at most one additional test contact attempt per assigned treatment client and none in control. Report total attempts and staff minutes per randomized client, plus withdrawals and complaints. A permission withdrawal blocks further contact immediately; it does not delete the assignment from the analysis.
 
-**Before launch:** the owner must approve a minimum worthwhile absolute improvement, an acceptable staff-time/complaint burden, a prospective baseline, and a sample-size/stopping plan. Do not plug the selected historical 65.1% rate into a power calculation as if it were this trial's control rate. This exercise deliberately makes no unsupported sample-size or cost promise.
+**Before launch:** the owner must approve a minimum worthwhile absolute improvement, an acceptable staff-time/complaint burden, a prospective baseline, and a sample-size/stopping plan. Do not plug the selected historical 65.1% rate into a power calculation as if it were this trial's control rate. This proposal makes no unsupported sample-size or cost promise.
 
 **Worked decision rule:** recommend wider testing only if the pre-specified primary analysis supports a positive difference, the estimated improvement reaches the owner's predeclared worthwhile effect, and the workload/contact guardrails pass. If results are imprecise, report inconclusive rather than zero effect; if a guardrail fails, do not recommend rollout regardless of subscription gains. No repeated significance checking or early declaration of success is permitted unless covered by the pre-specified stopping design. A larger deployment remains a separate business decision.
 
