@@ -14,7 +14,7 @@
     "accent": "accent"
   },
   "frame_label": "Campaign review",
-  "preview_note": "Historical campaign data · observed outcomes",
+  "preview_note": "Historical campaign data · observed outcomes · v1.0.0",
   "footer": "PYTHON / SQL / POWER BI",
   "preview_mode": "contain"
 }
