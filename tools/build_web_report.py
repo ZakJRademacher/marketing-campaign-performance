@@ -153,6 +153,8 @@ render();watchSections(['overview','groups','decision']);
 def main() -> None:
     data = load()
     html_text = page(
+        url="https://zakjrademacher.github.io/marketing-campaign-performance/report/",
+        image="https://zakjrademacher.github.io/marketing-campaign-performance/deliverables/portfolio-cover-wide.png",
         title="Marketing Campaign Review",
         description="Interactive review of bank marketing outcomes: selected high-rate groups, matched month and channel comparisons, and contact workload.",
         rail_name="Campaign<br>Review",
