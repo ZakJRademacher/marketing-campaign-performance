@@ -1,5 +1,7 @@
 # Marketing Campaign Performance
 
+![Power BI campaign review showing subscriptions and contact workload](deliverables/dashboard-preview.png)
+
 Higher subscription rates can make a campaign segment look promising, but they don't tell us what another contact would achieve. I used this project to compare outcomes with the workload behind them and outline what a useful follow-up test would need.
 
 The **Power BI report** covers **41,188 campaign observations, 4,640 subscriptions (11.3%), and 105,754 recorded contacts**. Python and SQLite prepare the data and support a closer comparison of prior outcomes within the same month and channel.
@@ -7,8 +9,6 @@ The **Power BI report** covers **41,188 campaign observations, 4,640 subscriptio
 **[Open the live report](https://zakjrademacher.github.io/marketing-campaign-performance/report/)** · [Preview image](deliverables/dashboard-preview.png) · [Download the PBIX](deliverables/Marketing%20Campaign%20Review.pbix) · [Read the comparison](docs/OUTCOME_COMPARISON.md)
 
 The live report is a self-contained page in [report/](report/), rebuilt from the processed data with `python tools/build_web_report.py`.
-
-![Power BI campaign review showing subscriptions and contact workload](deliverables/dashboard-preview.png)
 
 ## What I found
 
